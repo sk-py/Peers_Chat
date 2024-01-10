@@ -31,6 +31,10 @@ app.use(userUtilRoutes);
 
 app.use("/api/request", requestRoutes);
 
+app.get("/", (req, res) => {
+  res.send("Server running");
+});
+
 app.listen(PORT, () => {
   console.log(`Server Started On ${PORT} `);
 });
